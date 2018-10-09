@@ -1,6 +1,6 @@
 {
   "name": "@kuobrothers/web-push-kuobrothers",
-  "version": "3.3.3",
+  "version": "3.3.5",
   "description": "Web Push library for Node.js",
   "main": "src/index.js",
   "bin": {
