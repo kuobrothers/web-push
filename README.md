@@ -1,4 +1,4 @@
-<h1 align="center">web-push</h1>
+<h1 align="center">web-push-kuobrothers</h1>
 
 <p align="center">
   <a href="https://travis-ci.org/web-push-libs/web-push">
