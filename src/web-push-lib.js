@@ -332,10 +332,7 @@ WebPushLib.prototype.sendNotification =
             socket.setTimeout(10000);
             socket.on('timeout', function() {
                 pushRequest.abort();
-                reject(new WebPushError(
-                  'Socket timeout and request aborted',
-                  pushResponse.statusCode, pushResponse.headers, responseText, requestDetails.endpoint
-                ));
+                reject({statusCode:500, text:'Socket timeout and request aborted'});
             });
         });
 
