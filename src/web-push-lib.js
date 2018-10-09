@@ -328,6 +328,17 @@ WebPushLib.prototype.sendNotification =
         });
       });
 
+        pushRequest.on('socket', function (socket) {
+            socket.setTimeout(10000);
+            socket.on('timeout', function() {
+                pushRequest.abort();
+                reject(new WebPushError(
+                  'Socket timeout and request aborted',
+                  pushResponse.statusCode, pushResponse.headers, responseText, requestDetails.endpoint
+                ));
+            });
+        });
+
       pushRequest.on('error', function(e) {
         reject(e);
       });
